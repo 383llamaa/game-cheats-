@@ -1,0 +1,29 @@
+________________________________________________________________________________
+[ INITIALIZING SYSTEM SETUP: PROJECT RUST ]
+[ TARGET: DEPLOYMENT ON RASPBERRY PI ZERO 2 W ]
+________________________________________________________________________________
+
+> RUN INSTALL_DEPENDENCIES.SH
+
+[ SECTION 1: SYSTEM UPDATES ]
+Updating package lists and upgrading firmware for RP2350 compatibility...
+$ sudo apt update && sudo apt upgrade -y
+
+[ SECTION 2: PYTHON LIBRARIES ]
+Installing core modules for Serial Communication and Computer Vision...
+$ pip install pyserial
+$ pip install pillow
+$ sudo apt install python3-opencv -y
+
+[ SECTION 3: PERMISSIONS ]
+Granting the user access to the hardware dialout group to talk to the Pico 2...
+$ sudo usermod -a -G dialout $USER
+$ sudo chmod 666 /dev/ttyACM0
+
+[ SECTION 4: SPI CONFIGURATION ]
+Enabling the SPI bus for the 3.5" ILI9488 HUD...
+$ sudo raspi-config nonint do_spi 0
+________________________________________________________________________________
+[ SETUP COMPLETE ]
+[ SYSTEM READY FOR DEPLOYMENT ]
+________________________________________________________________________________
