@@ -9,7 +9,7 @@ ________________________________________________________________________________
 
 ================================================================================
 |                         PROJECT: ZERO-FOOTPRINT                              |
-|                         TARGET: XBOX / R6 SIEGE                              |
+|                         TARGET: XBOX                             |
 ================================================================================
 
 [ DESCRIPTION ]
@@ -39,12 +39,10 @@ permanently stored on the hardware; everything is volatile and streamed.
 
 [ MOUSETRAP_EVASION ]
 - Status: ENABLED
-- Method: Random Jitter (Uniform Distribution 0.92x - 1.08x)
 - Logic: Prevents "Straight Line" detection by Ubisoft's heuristic engine.
 
 [ FORENSIC_WIPE ]
 - Status: ACTIVE
-- Method: OverlayFS / Volatile RAM
 - Logic: Pulling power or USB connection results in total data loss on device.
 
 [ IMAGE OF SPI DISPLAY ILI9488 WIRING FOR RASPBERRY PI ]
